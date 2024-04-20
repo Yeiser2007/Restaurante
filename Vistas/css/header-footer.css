@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     color: #634402;
@@ -11,18 +11,82 @@
     font-style: normal;
     font-size: 16px;
     font-weight: 600;
-    
+
 }
-nav {
+.logotipo{
+    width: 60%;
+    margin-top: 0px;
+    border-radius: 30px;
+}
+nav.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: transparent !important;
+    height: 80px;
+}
+
+.navbar-nav {
+    width: 100%;
     display: flex;
     justify-content: center;
+    gap: 80px;
     align-items: center;
-    height: 80px;
-    background-color: #000;
-    margin: 0;
 }
+
+.navbar-collapse {
+    width: 100%;
+    justify-content: center;
+}
+
+/* Estilo para el toggler centrado */
+.navbar-toggler {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+   
+}
+.navbar-toggler-icon {
+    font-size: 24px; /* Tamaño del icono del toggler */
+  }
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-toggler .fas.fa-bars {
+    color: #fff;
+}
+
+.navbar-toggler[aria-expanded="true"] .fa-bars::before {
+    content: '\f00d';
+}
+
+.navbar-toggler[aria-expanded="true"] .fas.fa-bars::before {
+    color: #000000;
+}
+
+.navbar-dark .navbar-toggler-icon.collapsed,
+.navbar-dark .navbar-toggler-icon {
+    background-color: #fff !important;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    color: #3816e0da;
+}
+
 body {
-    
+
     width: 100%;
     margin: 0;
     flex: 1;
@@ -35,81 +99,16 @@ body {
     display: flex;
     margin-right: 20px;
 }
-.logotipo{
-   
-    width: 90%;
-    margin-top: 0px;
-    border-radius: 30px;
-}
-.logotipo-res{
+
+.logotipo-res {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.item {
-    margin-right: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    height: 50px;
-}
-.item {
-    margin-right: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    height: 50px;
-}
-.active{
-    color: #7a9b05;
-}
-.btn-salir{
-    background-color: #000;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.item a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-
-}
-
-.menu-icon {
-    display: none; 
-}
-
-.menu-icon .bar {
-    margin-right: 20px;
-    width: 25px;
-    height: 3px;
-    background-color: rgb(255, 255, 255);
-    text-align: end;
-    margin-top: 5px;
-    transition: 0.4s;
-}
-
-.menu-icon.open .bar:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.menu-icon.open .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.menu-icon.open .bar:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
-}
 
 
-footer { 
+
+footer {
     position: relative;
     color: #fff;
     text-align: center;
@@ -124,80 +123,48 @@ footer {
     width: 100%;
     height: 80px;
     background-color: #000000;
-    font-size: 12px
+    font-size: 12px;
+    color:#fff;
 }
 
-/* Media query para hacer el menú responsivo */
-@media screen and (max-width: 768px) {
-    body{
-        background: none;
-    }
-    .menu {
-        display: none;
-    }
+@media (max-width: 767px) {
 
-    .menu-icon {
-        display: block; /* Muestra el ícono de hamburguesa en pantallas pequeñas */
-        cursor: pointer;
-        margin-left: auto; /* Alinea el ícono de hamburguesa a la derecha */
-    }
-
-    .menu-icon.open .bar:nth-child(1) {
-        transform: rotate(-45deg) translate(-2px, 5px);
-    }
-
-    .menu-icon.open .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-icon.open .bar:nth-child(3) {
-        transform: rotate(45deg) translate(-2px, -5px);
-    }
-
-    /* Muestra el menú en pantallas pequeñas cuando se hace clic en el ícono de hamburguesa */
-    .menu.open {
-        z-index: 9999;
+    .logotipo-res {
         display: flex;
         flex-direction: column;
-        background-color: #000000;
-        position: absolute;
-        width: 70%;
-        top: 78px;
-        right: 0;
-        height: 100%;
+        justify-content: space-evenly;
         align-items: center;
-        margin: 0;
-        
+        background-size: cover;
+        height: 50vh;
+        /* mask-image: linear-gradient(#2f3033 70%, transparent); */
     }
 
-    .menu.open li {
-        margin-right: 0;
-        margin-bottom: 10px;
-
+    .navbar-nav {
         width: 100%;
-    }
-    .menu.open .item:hover {
-        background-color: #c5c905;
-        color: #000000;
-    }
-    .contenedor-home{
         display: flex;
-        flex: 1;
-        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 0px;
+        padding: 0;
     }
-    .contenedor-home h1{
-        font-size: 25px;
+
+    .navbar {
+        padding: 0;
     }
-    
-    .img-home{
-        width: 300px;
+
+    .navbar-nav .nav-link {
+        color: #000000 ;
+    }
+    .navbar-nav .nav-link:hover{
+        color: #3816e0da;
+    }
+   
+    .navbar-collapse {
+        background-color: #fff;
+        width: 100%;
+        margin: 0;
+        padding: 3rem 1rem;
         height: auto;
     }
-    .btn-salir{
-        background: none;
-        color: #000;
-        border: none;
-    }
 
-    
 }

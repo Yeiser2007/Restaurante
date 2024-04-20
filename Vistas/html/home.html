@@ -6,30 +6,55 @@
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="/Vistas/css/header-footer.css" />
-    <link rel="stylesheet" href="/Vistas/css/homeStyle.css" />
+    <link rel="stylesheet" href="/css/header-footer.css" />
+    <link rel="stylesheet" href="/css/homeStyle.css" />
   </head>
   <body>
-    <nav>
-      <ul class="menu" id="menu">
-        <li class="item"><a class="active" href="#">Inicio</a></li>
-        <li class="item"><a href="#">Registrar</a></li>
-        <li class="item"><a href="#">Consultar</a></li>
-        <li class="item"><a href="#">Control</a></li>
-      </ul>
-      <div class="menu-icon" onclick="toggleMenu()">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <button class="navbar-toggler border-0 ml-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon fas fa-bars"></span> <!-- Icono del toggler -->
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Desayunos</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#">Comidas</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pedidos</a>
+            </li>
+        
+          </ul>
+          
+        </div>
       </div>
     </nav>
+      
 <div class="main">
     <div class="logotipo-res">
       <h1>Bienvenidos</h1>
-      <img src="/Vistas/imagenes/logotipo.png" class="logotipo" alt="" />
-    </div>
+      <img src="/imagenes/logotipo.png" class="logotipo" alt="" />
 
+      <div class="wrapper">
+        <button id="botonHorario" class="boton-horario">Horario actual
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      </button>
+    </div>
     <div class="seccion2">
       <h1>Conocenos</h1>
       <p>
@@ -57,21 +82,35 @@
           <div class="carousel-item active">
             <img
               class="d-block"
-              src="/Vistas/imagenes/hebers.jpeg"
+              src="/imagenes/res1.jpg"
               alt="First slide"
             />
           </div>
           <div class="carousel-item">
             <img
               class="d-block"
-              src="/Vistas/imagenes/logotipo.jpeg"
+              src="/imagenes/re2.jpg"
               alt="Second slide"
             />
           </div>
           <div class="carousel-item">
             <img
               class="d-block"
-              src="/Vistas/imagenes/hebers.jpeg"
+              src="/imagenes/res3.jpg"
+              alt="Third slide"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="d-block"
+              src="/imagenes/res4.jpg"
+              alt="Third slide"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="d-block"
+              src="/imagenes/res5.jpg"
               alt="Third slide"
             />
           </div>
@@ -99,22 +138,19 @@
   </div>
     <div class="seccion3">
       <h2>Visitanos</h2>
-      <p>(De lunes a sabado)</p>
+      <img src="/imagenes/time2.png" class="time" alt="">
       <div class="horario">
-        <p>Desayunos : 8:30am -1:00p.m.</p>
-       <p>Comidas:1:00p.m- 5:20p.m</p>
-      
+      <p>(De lunes a sabado)</p>
+       <p>Desayunos : 8:30am - 1:00p.m.</p>
+       <p>Comidas: 1:00p.m - 5:20p.m</p>
       </div>
-      <span>Estado: abierto</span>
-
+      
+      <p>Estamos ubicados en:</p>
       <div class="ubicacion">
         <i class="bi bi-geo-alt-fill"></i>
-        <a href=""
-        >C. Sor Juana I. de La C. Manzana 022, Américas Cárdenas, 50000 Toluca
+        <a href=""> C. Sor Juana I. de La C. Manzana 022, Américas Cárdenas, 50000 Toluca
         de Lerdo, Méx.</a>
       </div>
-      
-      <img src="/Vistas/imagenes/image.png" alt="" class="chef">
       <iframe class="iframe"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.048426144541!2d-99.6482395247895!3d19.280260181966824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd899034940343%3A0x8177ba6227d1bf38!2sEl%20Sabor%20de%20las%20Americas!5e0!3m2!1ses-419!2smx!4v1713414681188!5m2!1ses-419!2smx"
         width="600"
@@ -130,9 +166,12 @@
       <div class="line-green"></div>
       <div class="line-brown">@by El sabor de las Americas</div>
     </footer>
-    <script src="../JS/header.js"></script>
+    <script src="/JS/header.js"></script>
+    <script src="/JS/boton.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
   </body>
 </html>
