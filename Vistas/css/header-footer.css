@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     color: #634402;
-    font-family: "Rowdies", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 16px;
@@ -39,6 +39,22 @@ nav.navbar {
     justify-content: center;
 }
 
+.btn-close{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: none;
+    border: none;
+}
+.btn-close span{
+    font-size: 20px;
+    font-weight: 600;
+}
+.btn-close span:hover{
+color: rgb(223, 0, 0);
+}
 /* Estilo para el toggler centrado */
 .navbar-toggler {
     position: absolute;
@@ -68,11 +84,6 @@ nav.navbar {
 
 .navbar-toggler[aria-expanded="true"] .fas.fa-bars::before {
     color: #000000;
-}
-
-.navbar-dark .navbar-toggler-icon.collapsed,
-.navbar-dark .navbar-toggler-icon {
-    background-color: #fff !important;
 }
 
 .navbar-nav .nav-link {
@@ -148,9 +159,7 @@ footer {
         padding: 0;
     }
 
-    .navbar {
-        padding: 0;
-    }
+   
 
     .navbar-nav .nav-link {
         color: #000000 ;
@@ -166,5 +175,7 @@ footer {
         padding: 3rem 1rem;
         height: auto;
     }
-
+    .navbar {
+        padding: 0;
+    }
 }
