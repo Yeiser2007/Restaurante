@@ -11,18 +11,18 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 80px;
     width: 60%;
     height: 60px;
 }
 
 .submenu .nav-link{
     color: #000000 ;
+
 }
 
   .container{
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,25 +34,16 @@ body{
   nav.navbar {
     position: absolute;
     top: 0;
-    width: 100%;
+    width: 100%;  
     background-color: #000 !important;
     height: 80px;
 }
 
-input[type="text"] {
-    width: 100%;
-    padding: 6px 12px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-}
-
 .entradas-tabla{
     display: flex;
-    width: 80%;
+    width: 90%;
     justify-content: space-between;
-    gap: 150px;
+    gap: 10px;
 }
 .btn-agregar{
     display: flex;
@@ -83,7 +74,10 @@ input[type="text"] {
     border-radius: 20px;
    }
 
-
+   th{
+    width: 100px;
+   }
+   
 .submenu .nav-link::after {
     content: '';
     display: block;
@@ -100,12 +94,96 @@ input[type="text"] {
   }
 
   .table-responsive{
-    width: 100%;
+    width: 90%;
   }
 
   thead{
-    background-color: #130557da;
+    background-color: #000;
   }
   thead tr th{
     color: #fff;
+    text-align: center;
   }
+
+  .int{
+    width: 80px;
+  }
+  .logotipo{
+    width: 60%;
+    margin-top: 0px;
+    border-radius: 30px;
+}
+
+.icons{
+  text-align: center;
+}
+
+.col{
+  width: 100px;
+}
+
+
+.table td, .table th{
+  vertical-align: middle;
+  border: solid 1px;
+}
+
+
+.table td input{
+  vertical-align: middle;
+  padding: 2px;
+  background:transparent !important;
+  border: none;
+  text-align: center;
+}
+
+
+
+@media (max-width: 767px) {
+  .logotipo-res {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    /* mask-image: linear-gradient(#2f3033 70%, transparent); */
+}
+
+*{
+  font-size: 12px;
+}
+
+  .submenu .nav-link{
+    color: #000000 ;
+    font-size: 15px;
+}
+
+.text-btn{
+  font-size: 12px;
+}
+.submenu {
+  width: 100%;
+  justify-content: space-evenly;
+}
+.filter{
+  width: 100% !important;
+}
+.table td input{
+  vertical-align: middle;
+  padding: 2px;
+  background:transparent !important;
+  border: none;
+}
+
+.container{
+  margin: 0 auto;
+  width: 100%;
+  padding: 0;
+}
+.table-responsive{
+  width: 100%;
+}
+.end{
+  width: 20px !important;
+}
+}

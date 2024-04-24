@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control admin</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/css/header-footer.css">
+    <link rel="stylesheet" href="/css/controlStyle.css">
+</head>
+
+<body>
+    <ul class="navbar-nav submenu">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/html/home.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/html/control-desayunos.html">Platillos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="pagina2.html">Menu</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="pagina3.html">Bebidas</a>
+        </li>
+    </ul>
+
+    <div class="container">
+        <div class="logotipo-res">
+            <img src="/imagenes/logotipo.png" class="logotipo" alt="">
+        </div>
+        
+        <h2>Lista Platillos</h2>
+        <div class="entradas-tabla">
+            <input type="text" id="filtro" class="form-control filter" placeholder="Filtrar tabla...">
+            <a class="btn-agregar text-btn" href="Registrar.html">+ Agregar</a>
+        </div>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="int">ID</th>
+                        <th >Nombre</th>
+                        <th class="col">Clasificacion</th>
+                        <th class="col">Tipo</th>
+                        <th class="int">Precio</th>
+                        <th class="end">Accion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" value="1" class="form-control entrada" disabled></td>
+                        <td><input type="text" value="Jamon" class="form-control entrada" disabled></td>
+                        <td><input type="text" value="Huevos" class="form-control entrada" disabled></td>
+                        <td><input type="text" value="Desayuno" class="form-control entrada" disabled></td>
+                        <td><input type="text" value="100" class="form-control entrada" disabled></td>
+                        <td class="icons">
+                            <button class="btn editar" onclick="habilitarEdicion(this)"><i
+                                    class="bi bi-pencil-square"></i></button>
+                            <button class="btn borrar" onclick="confirmarBorrado(this)"><i
+                                    class="bi bi-trash"></i></button>
+                            <button class="btn guardar" onclick="guardarCambios(this)" disabled><i
+                                    class="bi bi-floppy"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <div class="line-green"></div>
+        <div class="line-brown">
+            @by El sabor de las Americas
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="/JS/control.js"></script>
+
+</body>
+
+</html>
